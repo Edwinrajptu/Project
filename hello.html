@@ -3,23 +3,51 @@
 <head>
     <title>My First Web Page</title>
 
-    <!-- 🌈 CSS Styling Section -->
+    <!-- 🌈 Enhanced CSS Styling Section -->
     <style>
+        /* Background and general styles */
         body {
-            background-color: #f4f6f8;
-            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            font-family: 'Poppins', Arial, sans-serif;
             color: #333;
-            margin: 40px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        h1 {
-            color: #0066cc;
+        /* Centered content box */
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+            padding: 30px 50px;
+            max-width: 600px;
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Header animation */
+        h1 {
+            color: #0055aa;
+            font-size: 36px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h2 {
             color: #009933;
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
         p {
@@ -30,17 +58,26 @@
         hr {
             border: 0;
             height: 2px;
-            background: #ccc;
-            margin: 20px 0;
+            background: linear-gradient(to right, #66a6ff, #89f7fe);
+            margin: 25px 0;
         }
 
-        .container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px 40px;
-            max-width: 600px;
-            margin: auto;
+        /* Stylish button */
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -48,10 +85,11 @@
 <body>
     <div class="container">
         <h1>Hello, World!</h1>
-        <p>Welcome to my first HTML and CSS web page.</p>
+        <p>Welcome to my enhanced HTML and CSS web page 🎨</p>
         <hr>
         <h2>About Me</h2>
         <p>I’m learning HTML, CSS, and GitHub through VS Code!</p>
+        <button class="btn">Learn More</button>
     </div>
 </body>
 </html>
